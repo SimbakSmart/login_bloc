@@ -148,14 +148,22 @@ class LoginPage extends StatelessWidget {
   }
 
   Widget _crearBoton( ) {
-    return ElevatedButton(onPressed: null,
-       // style: ButtonStyle( backgroundColor: Color(Colors.deepPurple) ),
-     
-        child: Container(
-          padding: EdgeInsets.symmetric( horizontal: 80.0, vertical: 15.0),
+    return ElevatedButton(
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 80.0,vertical: 15.0),
       child: Text('Login'),
-    )
+    ),
+     style: ElevatedButton.styleFrom(
+       shape: RoundedRectangleBorder(
+         borderRadius: BorderRadius.circular(5.0)
+       ),
+           elevation: 0.0,
+       backgroundColor: Colors.deepPurple,
+       foregroundColor: Colors.white
+     ),
+     onPressed:()=>{
 
+     },
     );
   }
 
