@@ -212,26 +212,6 @@ class LoginPage extends StatelessWidget {
   }
 
 
-  // Widget _crearBoton( BuildContext context) {
-  //   return widget(
-  //
-  //    return  ElevatedButton(
-  //       child: Container(
-  //         padding: EdgeInsets.symmetric(horizontal: 80.0,vertical: 15.0),
-  //       child: Text('Login'),
-  //     ),
-  //      style: ElevatedButton.styleFrom(
-  //        shape: RoundedRectangleBorder(
-  //          borderRadius: BorderRadius.circular(5.0)
-  //        ),
-  //            elevation: 0.0,
-  //        backgroundColor: Colors.deepPurple,
-  //        foregroundColor: Colors.white
-  //      ),
-  //      onPressed:()=>_login(context)
-  //     ),
-  //   );
-  // }
 
   _login(LoginBloc bloc, BuildContext context) {
 
@@ -240,7 +220,8 @@ class LoginPage extends StatelessWidget {
     print('Password: ${ bloc.password }');
     print('================');
 
-    Navigator.pushReplacementNamed(context, 'home');
+   // Navigator.pushReplacementNamed(context, 'home');
+    Navigator.pushNamed(context, 'home');
 
   }
 

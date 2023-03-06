@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_bloc/src/bloc/provider.dart';
 import 'package:login_bloc/src/pages/home_page.dart';
 import 'package:login_bloc/src/pages/login_page.dart';
+import 'package:login_bloc/src/pages/producto_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -18,10 +19,11 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        initialRoute: 'login',
+        initialRoute: 'home',
         routes: {
           'login' :(BuildContext context)=>LoginPage(),
-          'home': (BuildContext context)=>HomePage()
+          'home': (BuildContext context)=>HomePage(),
+          'product': (BuildContext context)=>ProductoPage(key: UniqueKey())
         },
         theme: ThemeData(
           primaryColor: Colors.deepPurple,

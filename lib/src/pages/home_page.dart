@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final bloc = Provider.of(context);
+
 
     return Scaffold(
       appBar: AppBar(
@@ -20,11 +20,22 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Email: ${ bloc.email }'),
-          Divider(),
-          Text('Password: ${ bloc.password }')
+
         ],
       ),
+      floatingActionButton: _crearBoton(context),
     );
   }
+
+  _crearBoton(BuildContext context){
+
+    return FloatingActionButton(
+      child: Icon(Icons.add),
+        backgroundColor: Colors.deepPurple,
+        onPressed:  ()=> Navigator.pushNamed(context, 'product'),
+    );
+  }
+
+
+
 }
